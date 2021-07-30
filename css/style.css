@@ -8,12 +8,21 @@
 
 :root {
   font-size: 10px;
+
+  /* colors */
+  --bg-body: rgb(243, 243, 243);
+  --white: #fff;
+  --light-gray: rgb(211, 211, 211);
+  --light-gray-a: rgba(211, 211, 211, .1);
+  --blue: #0095f6;
+  --gray: #8e8e8e;
+
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-  background: rgb(243, 243, 243);
+  background: var(--bg-body);
   display: flex;
   justify-content: center;
   font-size: 1.4rem;
@@ -52,14 +61,14 @@ a {
 }
 
 .group {
-  background: #ffffff;
+  background: var(--white);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
-  border: 1px solid rgb(211, 211, 211);
+  border: 1px solid var(--light-gray);
   border-radius: .5rem;
 }
 
@@ -83,18 +92,18 @@ a {
 }
 
 .instagram-login {
-  background: #0095f6;
-  color: #fff;
+  background: var(--blue);
+  color: var(--white);
   border-radius: .3rem;
   padding: .8rem 1rem;
 }
 
 .instagram-logout {
-  color: #0095f6
+  color: var(--blue);
 }
 
 .not-account {
-  color: #8e8e8e;
+  color: var(--gray);
 }
 
 .not-account:nth-child(1) {
@@ -102,7 +111,7 @@ a {
 }
 
 .link-blue {
-  color: #0095f6;
+  color: var(--blue);
 }
 
 .get-app {
@@ -161,6 +170,6 @@ a {
   }
 
   .group {
-    border: 1px solid rgba(211, 211, 211, .1)
+    border: 1px solid var(--light-gray-a);
   }
 }
