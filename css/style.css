@@ -1,1 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
 
+:root {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+a {
+  font-weight: bold;
+}
+
+.instagram-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 60%;
+  height: 100vh;
+}
+
+.instagram-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.phone-image {
+  height: 70rem;
+}
+
+.instagram-continue {
+  min-height: 47.6rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.group {
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: .5rem;
+}
+
+.group:nth-child(1) {
+  min-height: 27rem;
+  padding: 2rem 0;
+}
+
+.instagram-logo {
+  height: 5rem;
+}
+
+.profile-photo {
+  width: 8.6rem;
+  height: 8.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-login {
+  background: #0095f6;
+  color: #fff;
+  border-radius: .3rem;
+  padding: .8rem 1rem;
+}
+
+.instagram-logout {
+  color: #0095f6
+}
+
+.not-account {
+  color: #8e8e8e;
+}
+
+.not-account:nth-child(1) {
+  margin-bottom: .5rem;
+}
+
+.link-blue {
+  color: #0095f6;
+}
+
+.get-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-app-text {
+  padding: 1rem 2rem;
+}
+
+.app-download-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-download {
+  width: 13.5rem;
+  height: 4rem;
+  background-size: cover;
+}
+
+.app-download:nth-child(1) {
+  background-image: url("../images/apple-button.png");
+}
+
+.app-download:nth-child(2) {
+  background-image: url("../images/googleplay-button.png");
+}
+
+@media (max-width: 1024px) {
+  .instagram-wrapper {
+    width: 90%
+  }
+}
+
+@media (max-width: 810px) {
+  .instagram-wrapper {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .instagram-phone {
+    display: none;
+  }
+
+  .instagram-continue {
+    width: 70%;
+  }
+}
+
+@media (max-width: 610px) {
+  .instagram-continue {
+    width: 100%;
+  }
+
+  .group {
+    border: 1px solid rgba(211, 211, 211, .1)
+  }
+}
