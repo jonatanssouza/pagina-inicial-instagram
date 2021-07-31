@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/instagram-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css" />
+    <!--<link rel="stylesheet" href="./css/style2.css" />-->
     <title>Instagram</title>
   </head>
   <body>
+    <div class="change-color">
+      <div class="button">
+        <div class="point"></div>
+      </div>
+    </div>
     <div class="instagram-wrapper">
       <div class="instagram-phone">
         <img
@@ -57,5 +63,29 @@
       <!--instagram-continue-->
     </div>
     <!--instagram-wrapper-->
+    <script>
+      let changeColor = document.querySelector('.change-color');
+      changeColor.addEventListener('click', function(){
+
+        // muda folha de estilo e adiciona transição botão
+        let button = changeColor.querySelector('.button');
+        let link = document.head.querySelector("link[rel='stylesheet']");
+        let getStyle = link.getAttribute('href');
+
+        
+        if( getStyle === './css/style.css' ) {
+          link.setAttribute('href', './css/style2.css');
+          button.style = 'right: 0;'
+        }
+        else {
+          link.setAttribute('href', './css/style.css');
+          button.style = 'left: 0;'
+        }
+
+        // toogle class pink
+        let point = button.querySelector('.point');
+        point.classList.toggle('--pink'); 
+      });
+    </script>
   </body>
 </html>
