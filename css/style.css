@@ -10,12 +10,11 @@
   font-size: 10px;
 
   /* colors */
-  --bg-body: rgb(243, 243, 243);
-  --white: #fff;
-  --light-gray: rgb(211, 211, 211);
-  --light-gray-a: rgba(211, 211, 211, .1);
-  --blue: #0095f6;
-  --gray: #8e8e8e;
+  --bg-body: linear-gradient(45deg, rgba(195,37,137,1) 5%, rgba(5,5,32,1) 51%);
+  --pink: rgb(195, 37, 137);
+  --gray: rgb(142, 142, 142);
+  --white: hsl(0, 0%, 100%);
+  --glass: rgba( 255, 255, 255, .07 );
 
 }
 
@@ -52,7 +51,7 @@ a {
 }
 
 .instagram-continue {
-  min-height: 47.6rem;
+  min-height: 50rem;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -61,29 +60,32 @@ a {
 }
 
 .group {
-  background: var(--white);
+  background: var(--glass);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
-  border: 1px solid var(--light-gray);
   border-radius: .5rem;
+  backdrop-filter: blur(1rem);
+  box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, .5);
 }
 
 .group:nth-child(1) {
-  min-height: 27rem;
+  min-height: 30rem;
   padding: 2rem 0;
 }
 
 .instagram-logo {
   height: 5rem;
+  filter: drop-shadow(0 0 .1rem white);
 }
 
 .profile-photo {
   width: 8.6rem;
   height: 8.6rem;
+  border: 1px solid var(--pink);
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -92,14 +94,14 @@ a {
 }
 
 .instagram-login {
-  background: var(--blue);
+  background: var(--pink);
   color: var(--white);
   border-radius: .3rem;
   padding: .8rem 1rem;
 }
 
 .instagram-logout {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 .not-account {
@@ -111,7 +113,7 @@ a {
 }
 
 .link-blue {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 .get-app {
@@ -122,6 +124,7 @@ a {
 
 .get-app-text {
   padding: 1rem 2rem;
+  color: var(--white);
 }
 
 .app-download-wrapper {
@@ -133,23 +136,29 @@ a {
   width: 13.5rem;
   height: 4rem;
   background-size: cover;
+  border-radius: .5rem;
 }
 
 .app-download:nth-child(1) {
   background-image: url("../images/apple-button.png");
+  border-right: .1rem solid var(--white);
 }
 
 .app-download:nth-child(2) {
   background-image: url("../images/googleplay-button.png");
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .instagram-wrapper {
     width: 90%
   }
 }
 
 @media (max-width: 810px) {
+  :root {
+    --bg-body: linear-gradient(10deg, rgba(195,37,137,1), rgba(5,5,32,1) 35%);
+  }
+
   .instagram-wrapper {
     width: 90%;
     justify-content: center;
@@ -167,9 +176,5 @@ a {
 @media (max-width: 610px) {
   .instagram-continue {
     width: 100%;
-  }
-
-  .group {
-    border: 1px solid var(--light-gray-a);
   }
 }
