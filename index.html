@@ -72,20 +72,24 @@
         let link = document.head.querySelector("link[rel='stylesheet']");
         let getStyle = link.getAttribute('href');
 
-        
+        // define animação para transição suave
+        document.body.style.animation = '';
+        setTimeout( () => document.body.style.animation = 'smooth .5s linear', 5);
+
         if( getStyle === './css/style.css' ) {
           link.setAttribute('href', './css/style2.css');
-          button.style = 'right: 0;'
+          setTimeout( () => button.style = 'right: 0;', 5 );
         }
         else {
           link.setAttribute('href', './css/style.css');
-          button.style = 'left: 0;'
+          setTimeout( () => button.style = 'left: 0;', 5 );
         }
 
-        // toogle class pink
+        // alterna entre classe --pink
         let point = button.querySelector('.point');
         point.classList.toggle('--pink'); 
-      });
+      }); 
+
     </script>
   </body>
 </html>
